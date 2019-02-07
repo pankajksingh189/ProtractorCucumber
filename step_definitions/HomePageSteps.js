@@ -1,6 +1,5 @@
 chai = require('chai');
 expect = chai.expect;
-//var assert = require('assert');
 
 const {Given, When, Then} = require('cucumber');
 var {setDefaultTimeout} = require("cucumber");
@@ -19,14 +18,17 @@ When(/^I enter city name "([^"]*)"$/, function (arg1, callback) {
     })
 });
 Then(/^"([^"]*)" should be displayed in box$/, function (arg1, callback) {
-    element(by.css("#searchform  [type='submit']")).click().then(function () {
-        element(by.css(".alert.alert-warning")).getText().then(function (text) {
+    element(by.css("#searchform  [type='submit']")).click()
+        .then(function () {
+            return element(by.css(".alert.alert-warning")).getText();
+        })
+        .then(function (text) {
             let msg = (text.split("\n"))[1];
-            console.log("Name printed is :" + msg);
+            console.log("error message is :" + msg);
             expect(msg).to.equal(arg1);
+
+        }).then(function(){
             callback();
         })
-
-    });
 
 });
