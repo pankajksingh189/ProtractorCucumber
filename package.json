@@ -1,0 +1,17 @@
+{
+  "name": "ProtractorCucumber",
+  "version": "1.0.0",
+  "description": "This is for coding challenge -Powai",
+  "main": "index.js",
+  "dependencies": {
+    "cucumber": "5.1.0",
+    "protractor": "5.4.1",
+    "protractor-cucumber-framework": "6.1.1",
+    "chai": "3.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "pankaj singh",
+  "license": "ISC"
+}
