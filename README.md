@@ -15,7 +15,8 @@ This framework is developed to test "https://openweathermap.org/" using Protract
 
 ## Project Structure
 
-![alt tag](./metadata/projectStracture.png)
+![alt tag](./metadata/projectStructure.PNG)
+
 #### Prerequisites
 1) Install Node.js -https://nodejs.org/en/download/
 2) Install Java Development Kit -https://www.java.com/en/download/
@@ -35,7 +36,7 @@ This framework is developed to test "https://openweathermap.org/" using Protract
 #### Reporting
 * Reports will be generated automatically after execution at ./reports folder.
 
-![alt tag](./metadata/report.png)
+![alt tag](./metadata/report.PNG)
 
 #### Jenkins Setup
 
