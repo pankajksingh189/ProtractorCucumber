@@ -7,14 +7,12 @@
     "cucumber": "5.1.0",
     "protractor": "5.4.1",
     "protractor-cucumber-framework": "6.1.1",
-    "chai": "3.5.0"
+    "chai": "3.5.0",
+    "protractor-multiple-cucumber-html-reporter-plugin": "^1.8.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "pankaj singh",
-  "license": "ISC",
-  "devDependencies": {
-    "protractor-multiple-cucumber-html-reporter-plugin": "^1.8.0"
-  }
+  "license": "ISC"
 }
