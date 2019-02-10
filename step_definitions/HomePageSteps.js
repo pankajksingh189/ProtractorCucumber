@@ -24,7 +24,13 @@ Then(/^User should see Unit Check toggle$/, function (callback) {
                 callback(new Error(" Unit check toggle is not presence."));
             }
         });
+});
 
+When(/^User toggles to "([^"]*)" unit$/, function (unit, callback) {
+    homePagePO.toggleUnit(unit)
+        .then(function () {
+            callback();
+        });
 });
 
 Then(/^User should see application logo$/, function (callback) {
@@ -42,7 +48,7 @@ Then(/^User should see application logo$/, function (callback) {
 When(/^User is on landing page$/, function (callback) {
     homePagePO.getPageTitle()
         .then(function (pageTitle) {
-            expect(pageTitle, "User is not on home page.").to.equal(this.homePageTitle);
+            expect(pageTitle, "User is not on home page.").to.equal(browser.params.pageTitle);
             callback();
         });
 });
@@ -57,6 +63,16 @@ Then(/^User should see weather graph$/, function (callback) {
                 callback(new Error("weather graph is not presence."));
             }
         });
+});
+
+Then(/^User should see "([^"]*)" in weather widget$/, function (unit, callback) {
+    homePagePO.getWidgetUnit()
+        .then(function (str) {
+            console.log("Unit fetched from application " + str)
+            expect(str.toString()).to.contains(unit);
+            callback();
+        });
+
 });
 
 Then(/^User should see below header menu$/, function (headerMenuList, callback) {
@@ -91,10 +107,10 @@ Then(/^User should see below footer menu$/, function (footerMenuList, callback) 
 });
 
 Then(/^User should get page title as "([^"]*)"$/, function (title, callback) {
-    this.homePageTitle = title;
+    browser.params.pageTitle= title;
     homePagePO.getPageTitle()
         .then(function (pageTitle) {
-            console.log("$$$$$$$$$$$ " + pageTitle + "fgfgfgf " + this.homePageTitle);
+            console.log("Page title: " + pageTitle);
             expect(pageTitle).to.equal(title);
             callback();
         });
