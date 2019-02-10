@@ -40,7 +40,7 @@ This framework is developed to test "https://openweathermap.org/" using Protract
 
 #### Jenkins Setup
 Perform following in windows batch command to execute protractor from jenkins
-![alt tag](./metadata/jenkins.PNG)
+![alt tag](./metadata/jenkins.png)
 
 
 ==============================================================
