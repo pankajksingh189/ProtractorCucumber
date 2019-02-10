@@ -13,7 +13,7 @@ This framework is developed to test "https://openweathermap.org/" using Protract
 3) Cucumber reporting which helps to publish BDD result in a readable format.
 4) Multiple browser support.
 
-####Project Structure
+##Project Structure
 
 ![alt tag](./metadata/projectStracture.png)
 #### Prerequisites
