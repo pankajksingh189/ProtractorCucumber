@@ -6,23 +6,28 @@ exports.config = {
     frameworkPath: require.resolve('protractor-cucumber-framework'),
 
     suites: {
-        landingPage: ['./featureFiles/HomePage.feature'],
+        landingPage: [
+           // './featureFiles/HomePage.feature',
+            './featureFiles/SearchFunctionality.feature',
+
+        ],
 
     },
 
     cucumberOpts: {
         require: ['./step_definitions/*.js'],
+        format: 'json:reports/results.json',
     },
 
     onPrepare: function () {
         //browser.manage().window().maximize();
-        browser.manage().timeouts().implicitlyWait(20000);
-        browser.manage().timeouts().pageLoadTimeout(120000);
-        browser.manage().timeouts().setScriptTimeout(60000);
+        browser.manage().timeouts().implicitlyWait(120000);
+        browser.manage().timeouts().pageLoadTimeout(180000);
+        browser.manage().timeouts().setScriptTimeout(120000);
     },
 
 
-    //###### if you want to run test in multipler browser #######
+    //###### if you want to run test in multiple browser #######
     // multiCapabilities: [{
     //     browserName: 'firefox',
     // }, {
@@ -30,6 +35,24 @@ exports.config = {
     // }]
 
     capabilities: {
-        browserName: 'chrome'
+        browserName: 'chrome',
+        keepAlive:true,
+        metadata: {
+            device: 'PC',
+            platform: {
+                name: 'Windows',
+                version: '10'
+            }
+        }
+
     },
+    plugins: [{
+        package: 'protractor-multiple-cucumber-html-reporter-plugin',
+        options:{
+            automaticallyGenerateReport: true,
+            removeExistingJsonReportFile: true
+        }
+    }],
+
+
 }

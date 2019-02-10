@@ -13,5 +13,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "pankaj singh",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "protractor-multiple-cucumber-html-reporter-plugin": "^1.8.0"
+  }
 }
