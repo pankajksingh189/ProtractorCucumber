@@ -12,7 +12,7 @@ This framework is developed to test "https://openweathermap.org/" using Protract
 3) Cucumber reporting which helps to publish BDD result in a readable format.
 4) Multiple browser support.
 
-####Project Stracture
+####Project Structure
 ![alt tag](./metadata/projectStracture.png)
 #### Prerequisites
 1) Install Node.js -https://nodejs.org/en/download/
@@ -23,7 +23,7 @@ This framework is developed to test "https://openweathermap.org/" using Protract
 2) From project folder, hit below commands in command prompt
  * npm install -g protractor
  * npm install -g cucumber
- * 'webdriver-manager start' to start up the server.
+ * 'webdriver-manager update' to update selenium drivers.
 
 #### Execution
 * Open terminal
@@ -55,13 +55,14 @@ Validate user is able to change unit of measurement to Imperial.
 
 #####Question:
 If you had more time what would you do differently or additionally?
-<br>Current project contains validations in step definition file and protractor API is called at poge bejct level. Given time, it would be best approach if we could devide whole framework into below 3 components:
+<br>Current project contains validations in step definition file and protractor API is called at page object level. Given time, it would be best approach if we could devide whole framework into below 3 components:
 <br>1st component contains BDD and step definition (No validations at step level)
-<br>2nd component contains testHelper and PO: Its is the replica of page and contains all action which a manual tester does.
+<br>2nd component contains testHelper and PO: It is the replica of page and contains all action which a manual tester does.
 <br>3rd component contains protractor related functions which is called in second component.
 <br>lib folder containing all common functions
-<br> utility folder containing all utilities toparse files (eg: xml, xls, json parser etc)
+<br> utility folder containing all utilities to parse files (eg: xml, xls, json parser etc)
 ######Advantage of dividing framework in described format are below:
 * If we want to move away from cucumber and want to adopt new technology then only 1st component will change and rest will remain change.
 * If Business requirement or UI is changed then we need to modify only second component.
 * If we move from protractor and want to use different technology then only 3rd component will change.    
+
