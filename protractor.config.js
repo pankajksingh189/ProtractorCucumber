@@ -1,7 +1,7 @@
 exports.config = {
-     seleniumServerJar: './node_modules/protractor/node_modules/webdriver-manager/selenium/selenium-server-standalone-3.141.59.jar',
+    // seleniumServerJar: './node_modules/protractor/node_modules/webdriver-manager/selenium/selenium-server-standalone-3.141.59.jar',
     seleniumPort: '4444',
-    //seleniumAddress: 'http://localhost:4444/wd/hub',
+    seleniumAddress: 'http://localhost:4444/wd/hub',
     framework: 'custom',
     frameworkPath: require.resolve('protractor-cucumber-framework'),
 
