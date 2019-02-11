@@ -2,7 +2,7 @@
 
 ![alt tag](./metadata/logo.png)
 
-###Overview
+### Overview
 This framework is developed to test "https://openweathermap.org/" using Protractor with Cucumber.
 <br>
 <h4>Features
