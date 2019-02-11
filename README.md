@@ -46,19 +46,19 @@ Perform following in windows batch command to execute protractor from jenkins
 ==============================================================
 ##### Acceptance Criteria:
 ###### Point 01:
-Validate Landing page title
-Validate presence of unit toggle button at Landing page
-Validate presence of weather graph at Landing page
-Validate presence of header menu at Landing page   
-Validate presence of footer menu at Landing page
+* Validate Landing page title
+* Validate presence of unit toggle button at Landing page
+* Validate presence of weather graph at Landing page
+* Validate presence of header menu at Landing page   
+* Validate presence of footer menu at Landing page
 
 ###### Point 02 and 03
-Validate error message is shown for invalid location.
-Validate valid information is shown for valid location.
+* Validate error message is shown for invalid location.
+* Validate valid information is shown for valid location.
 
 ###### Extra Validation:
-Validate user is able to change unit of measurement to Metric.
-Validate user is able to change unit of measurement to Imperial.
+* Validate user is able to change unit of measurement to Metric.
+* Validate user is able to change unit of measurement to Imperial.
 
 ##### Question:
 If you had more time what would you do differently or additionally?
