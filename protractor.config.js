@@ -18,6 +18,8 @@ exports.config = {
     cucumberOpts: {
         require: ['./step_definitions/*.js'],
         format: 'json:reports/results.json',
+        //strict: true,
+        'no-colors': false,
     },
 
     onPrepare: function () {
@@ -38,6 +40,11 @@ exports.config = {
     capabilities: {
         browserName: 'chrome',
         keepAlive: true,
+        // uncommet this if running test behind proxy
+        // proxy: {
+        //     'proxyType': 'manual',
+        //     'httpProxy': 'hostname.com:1234'
+        // },
         metadata: {
             device: 'PC',
             platform: {
